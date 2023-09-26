@@ -36,6 +36,9 @@ public class Item {
     @ManyToOne
     @JoinColumn(name = "category_id", insertable = false, updatable = false)
     private Category category;
+    
+    @Column(name = "STOCK")
+    private Integer stock;
 
 	public Integer getId() {
 		return id;
@@ -83,5 +86,13 @@ public class Item {
 
     public Category getCategory() {
         return this.category;
+    }
+    
+    public Integer getStock() {
+        return this.stock;
+    }
+
+    public void setStock(Integer stock) {
+        this.stock = stock;
     }
 }
